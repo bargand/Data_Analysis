@@ -20,8 +20,8 @@ else:
     print("It is not a valid Operator")
 
 
-
-
+#or
+'''
 x= int(input("First Number: "))
 y= int(input("First Number: "))
 z= input("give operator")
@@ -37,3 +37,4 @@ operators={
 }
 
 print(operators)
+'''
