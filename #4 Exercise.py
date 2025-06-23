@@ -17,7 +17,7 @@ elif (z=="//"):
 elif (z=="%"):
     print(x%y)
 else:
-    print("It is not a valid Operator")
+    print("It is invalid Operator")
 
 
 #or
