@@ -56,6 +56,7 @@ else:
 
 '''
 
+'''
 #Grade Checker
 
 result = int(input("Enter your number: "))
@@ -72,3 +73,77 @@ elif(result <= 59):
     print("FAIL")
 else:
     print("Enter a valid number")
+
+'''
+
+#Nested if else
+
+'''
+#Number Sign and Type(first check it is positive, negetive or zero, then it check if it is possitive so it is even or odd)
+
+a = int(input("Enter your number: "))
+
+if (a > 0):
+    print("it is positive number")
+    if((a%2) == 0):
+        print("it is even number")
+    else:
+        print("it is odd number")
+elif(a < 0):
+    print("it is negetive number")
+else:
+    print("it is zero")
+
+'''
+
+'''
+#Password Checker
+
+user = "bargand"
+passw = 12345
+
+userInput = input("Enter your usernam: ")
+passwInput = int(input("Enter your passward: "))
+
+if (userInput == user):
+    print("username is correct")
+    if(passwInput == passw):
+        print("successfully loggedin")
+    else:
+        print("incorrect passward")
+else:
+    print("username is incorrect")
+
+'''
+
+#Largest of Three Numbers
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+
+if (b <= a >= c):
+    if(a==b==c):
+        print("all 3 numbers are same")
+    elif(a==b):
+        print("a and b is same number")
+    elif(a==c):
+        print("a and c is same number")
+    else:
+        print("a is largest")
+elif(a < b > c):
+    if(b==a):
+        print("b and a is same number")
+    elif(b==c):
+        print("b and c is same number")
+    else:
+        print("b is largest")
+elif(a < c > b):
+    if(c==a):
+        print("c and a is same number")
+    elif(c==b):
+        print("c and b is same number")
+    else:
+        print("c is largest")
+else:
+    print("Do not understand your numbers")
