@@ -116,6 +116,7 @@ else:
 
 '''
 
+'''
 #Largest of Three Numbers
 
 a = float(input("Enter first number: "))
@@ -147,3 +148,27 @@ elif(a < c > b):
         print("c is largest")
 else:
     print("Do not understand your numbers")
+
+'''
+
+
+#Student Grade & Pass Status
+
+marks = int(input("Enter your marks: "))
+
+if(marks>=50):
+    if(marks<=100):
+        if(marks>99):
+            print("O")
+        elif(marks==99):
+            print("E")
+        elif(80<= marks <99):
+            print("VG")
+        elif(70 <= marks <79):
+            print("G")
+        elif(50 <= marks <69):
+            print("NB")
+    else:
+        print("please enter your valid number under 1-100")
+else:
+    print("FAIL")        
