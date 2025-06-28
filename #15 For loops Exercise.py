@@ -188,3 +188,26 @@ for i in range(2,51):
     if is_prime:
         print(i)
 '''
+
+'''
+#Find the factorial of a number
+
+num = int(input("Enter your number: "))
+factorial = 1
+
+for i in range(1, num+1):
+    factorial *= i
+print(f'The factorial of {num}! is: {factorial}')
+
+'''
+
+#Print numbers from 1 to 100, but for multiples of 3 print "Fizz", for multiples of 5 print "Buzz", and for multiples of both print "FizzBuzz"
+
+for i in range (1,101):
+    print(i)
+    if (i%15 == 0):
+        print(f"{i} it is multiples of 15: FizzBuzz")
+    if (i%5 == 0):
+        print(f"{i} it is multiples of 5: Buzz")
+    if (i%3 == 0):
+        print(f"{i} it is multiples of 3: Fizz")
