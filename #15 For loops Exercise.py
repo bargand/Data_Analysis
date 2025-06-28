@@ -201,6 +201,7 @@ print(f'The factorial of {num}! is: {factorial}')
 
 '''
 
+'''
 #Print numbers from 1 to 100, but for multiples of 3 print "Fizz", for multiples of 5 print "Buzz", and for multiples of both print "FizzBuzz"
 
 for i in range (1,101):
@@ -212,3 +213,84 @@ for i in range (1,101):
         print("it is multiples of 3: Fizz")
     else:
         print(i)
+
+'''
+
+'''
+#Find the sum of digits of a number (e.g., 1234 → 10)
+
+num = int(input("Enter yoyr number that you have to sum: "))
+summ = 0
+for i in str(num):
+    summ += int(i)
+print(f"the sum of {num} is {summ}")
+
+'''
+
+#Remove duplicates from a list
+
+primary_list = [1,2,2,3,3,3,4,5,6,7,7,6,4,3,2,5,7,8]
+unique_list = []
+
+for i in primary_list:
+    if i not in unique_list:
+        unique_list.append(i)
+print(unique_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
