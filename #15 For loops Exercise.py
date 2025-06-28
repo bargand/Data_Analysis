@@ -167,10 +167,24 @@ print(revrse)
 
 '''
 
-
+'''
 #10. Print the Multiplication Table of a Number (e.g., 7)
 
 num = int(input("Enter Your Number for Multiplication Table: "))
 
 for i in range(1,11):
     print(f'{num} * {i} = {num*i}')
+
+'''
+
+'''
+#Print All Prime Numbers Between 1 and 50
+for i in range(2,51):
+    is_prime = True
+    for j in range(2, int(i**0.5)+1):
+        if (i%j == 0):
+            is_prime = False
+            break
+    if is_prime:
+        print(i)
+'''
