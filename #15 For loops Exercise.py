@@ -462,6 +462,8 @@ print(col_sum)
 
 '''
 
+'''
+'''
 #Exercise 4: Find the Transpose of a Matrix (Given the same matrix above, use nested loops to generate its transpose (swap rows and columns).)
 
 matrix = [
