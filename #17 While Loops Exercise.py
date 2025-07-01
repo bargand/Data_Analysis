@@ -199,6 +199,7 @@ while user_input != "q":
 
 '''
 
+'''
 #Typing Speed Test (Simplified)
 
 import time
@@ -212,9 +213,55 @@ while True:
 
     print(f"You have taken {round(end - start, 2)} sec")
 
-    if input("Try again y/n") != "y":
+    if input("Try again y/n: ") != "y":
         break
 
+'''
+
+'''
+#Car Start/Stop Engine Simulation (Simulate a car with commands like start, stop, quit. Use a while loop to process commands. Avoid repeating actions (e.g., starting when already started).)
+
+started = False
+
+while True:
+    command = input("> ").lower()
+
+    if command == "start":
+        if started:
+            print("car already started")
+        else:
+            print("car started")
+            started = True
+    elif command == "go":
+        if not started:
+            print("First You have to start the car")
+        else:
+            print("Go........")
+    elif command == "stop":
+        if not started:
+            print("car is already stopped")
+        else:
+            print("car stopped")
+            started = False
+    elif command == "quit":
+        print("Game Over")
+        break
+    else:
+        print("Please enter a valid command")
+
+'''
+
+#
+
+with open("sample.txt", "r") as file:
+    line = file.readline()
+
+    while line:
+        if "STOP" in line:
+            print("STOP found")
+            break
+        print(line.strip())
+        line = file.readline()
 
 
 
