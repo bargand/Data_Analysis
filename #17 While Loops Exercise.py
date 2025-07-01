@@ -76,7 +76,37 @@ while num != user_input:
 
 '''
 
+'''
+#ATM Simulation (Simulate a basic ATM. Show options like balance, deposit, withdraw, exit. Keep looping until the user chooses to exit.)
 
+user_exit = "exit"
+
+user_input = ""
+bank_balance = 100000
+
+while user_input != user_exit:
+    user_input = str(input("What yoy have to do with your account: "))
+    if user_input != user_exit:
+        if user_input == "balance":
+            print(f'Your bank balance is {bank_balance}')
+        elif user_input == "d":
+            print(f"How much you have to deposit: ")
+            amount = int(input("Enter Amount: "))
+            bank_balance += amount
+            print(f"Clr Balance is {bank_balance}")
+        elif user_input == "w":
+            print(f"How much you have to withdraw: ")
+            amount = int(input("Enter Amount: "))
+            if amount <= bank_balance:
+                bank_balance -= amount
+                print(f"Clr Balance is {bank_balance}")
+            else:
+                print("insufficient fund")
+    else:
+        print("thank you")
+        break
+
+'''
 
 
 
