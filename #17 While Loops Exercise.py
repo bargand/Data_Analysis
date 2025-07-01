@@ -160,9 +160,60 @@ while (i <= 100):
 
 '''
 
+'''
+#Track Workout Reps (Ask the user how many reps they did each time. Keep adding to a total until the user types "done". Show the total reps at the end.)
 
+total_reps = []
 
+user_input = ""
+total = 0
 
+while user_input != "done":
+    user_input = input("Enter your reps: ")
+    if user_input !="done":
+        total_reps.append(user_input)
+    else:
+        print("Thank you")
+        for i in total_reps:
+            total += int(i)
+        print(f"Your Total reps os {total_reps} = {total}")
+
+'''
+
+'''
+#Temperature Converter (Loop Until Exit) (Keep converting Celsius to Fahrenheit until the user types ‘q’ or ‘quit’. Use a while loop to keep the process going)
+
+user_input = ""
+
+while user_input != "q":
+    user_input = input("convert 1. °C to °F or 2. °F to °C: ")
+    if user_input == str(1):
+        C = int(input("Enter °C temperature: "))
+        print(f"°C to °F temperature is {(C* 9/5)+32}")
+    elif user_input == str(2):
+        C = int(input("Enter °F temperature: "))
+        print(f"°F to °C temperature is {(C - 32)*5/9}")
+    else:
+        print("Thank You")
+        break
+
+'''
+
+#Typing Speed Test (Simplified)
+
+import time
+
+while True:
+    input("enter any key to start: ")
+
+    start = time.time()
+    text = input("Enter a text and show your typing speed: ")
+    end = time.time()
+
+    print(f"You have taken {round(end - start, 2)} sec")
+
+    if input("Try again y/n") != "y":
+        break
 
 
 
