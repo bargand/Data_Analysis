@@ -108,6 +108,83 @@ while user_input != user_exit:
 
 '''
 
+'''
+#Guess the Number (Generate a random number. Keep asking the user to guess until they get it right. Tell them when they’re correct.)
+
+import random
+
+guess_number = random.randint(1,100)
+# print(f"The Random Number is: {guess_number}")
+
+user_input = ""
+
+while user_input != guess_number:
+    user_input = int(input("Guess a number between 1-100: "))
+    if user_input <= 100:
+        if user_input > guess_number:
+            print("Your guessing number is big")
+        elif user_input < guess_number:
+            print("Your gussing number is small")
+        else:
+            print("Successfully pick the wright number")
+            break
+    else:
+        print("please enter a valid number")
+        continue
+
+'''
+
+'''
+#Input Validation (Only Numbers) (Ask the user for a number. If they enter letters or anything else, reject it and keep asking until they give a valid number.)
+
+while True:
+    user_input = input("Enter a number: ")
+    if user_input.isdigit():
+        break
+    print("Not a valid number. Try again.")
+print("Thanks!")
+
+'''
+
+'''
+#Find Factors of a Number (Ask the user for a number. Use a while loop to print all its factors (numbers that divide it evenly).)
+
+i = 0
+num = int(input("Enter a number which you have to find of it's factor under 0-100: "))
+while (i <= 100):
+    # print(i)
+    i += 1
+
+    if i%num == 0:
+        print(i)
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
