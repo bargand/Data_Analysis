@@ -251,7 +251,8 @@ while True:
 
 '''
 
-#
+'''
+# File Reader - Read Until Keyword (Read a file line by line using a while loop. Stop reading when the line contains the word "STOP".)
 
 with open("sample.txt", "r") as file:
     line = file.readline()
@@ -263,9 +264,45 @@ with open("sample.txt", "r") as file:
         print(line.strip())
         line = file.readline()
 
+'''
+
+'''
+#Simulate Dice Rolls Until You Get a 6 (Use random.randint() to roll a dice. Keep rolling until the number is 6. Print each roll.)
+
+import random
+roll = 0
+while roll != 6:
+    roll = random.randint(1, 6)
+    print("Rolled:", roll)
+print("Got a 6!")
+
+'''
+
+'''
+#Validate Email Format
 
 
+while True:
+    email = input("Enter email address: ")
+    if "@" in email and "." in email:
+        print("This is a valid email")
+        break
+    else:
+        print("Please entar a valid email")
 
+'''
+
+#Pagination
+
+
+items = list(range(1, 51))
+index = 0
+while index < len(items):
+    print(items[index:index+5])
+    cont = input("Next page? (y/n): ")
+    if cont.lower() != 'y':
+        break
+    index += 5
 
 
 
