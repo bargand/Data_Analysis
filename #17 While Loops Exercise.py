@@ -294,7 +294,6 @@ while True:
 
 #Pagination
 
-
 items = list(range(1, 51))
 index = 0
 while index < len(items):
