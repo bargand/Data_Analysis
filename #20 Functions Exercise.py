@@ -78,31 +78,96 @@ bill(1324,7)
 
 '''
 
-def add_expense(expenses, category, amount):
-    if category in expenses:
-        expenses[category] += amount
-    else:
-        expenses[category] = amount
+'''
+#Expense Tracker (Function: add_expense(expenses, category, amount) (Modify a dictionary to store categorized expenses.)
 
-# Initial expense record
-expenses = {
-    "food": 100,
-    "transport": 50
+def add_expense(expense, category, price):
+    if category in expense:
+        expense[category] += price
+    else:
+        expense[category] = price
+expense={
+    "food": 30,
+    "milk": 40
 }
 
-# Add expense to an existing category
-add_expense(expenses, "food", 25)
+add_expense(expense, "food", 50)
+add_expense(expense, "mango", 50)
+add_expense(expense, "milk", 10)
+add_expense(expense, "food", 50)
 
-# Add expense to a new category
-add_expense(expenses, "entertainment", 60)
+print(expense)
 
-# Final output
-print(expenses)
+'''
 
+#To-Do List Manager (Functions: add_task(todo_list, task), remove_task(todo_list, task), list_tasks(todo_list) (Build a command-line task manager with these functions.)
 
+'''
+toDo =["tubai"]
 
+user_input = input("Do you want to 1. add(a) or 2. remove(r): ")
 
+if user_input == "a":
+    user_add_input = input("Add your todo: ")
+    toDo.append(user_add_input)
+    print(toDo)
+elif user_input == "r":
+    user_remove_input = input("remove your todo: ")
+    toDo.remove(user_remove_input)
+    print(toDo)
+else:
+    print("Please enter valid message")
 
+'''
+
+#7: To-Do List Manager by implementing the three functions
+
+def add_list(todo_list, task):
+    if task not in todo_list:
+        todo_list.append(task)
+    else:
+        print(f"{task} is already exist")
+
+def remove_list(todo_list, task):
+    if task in todo_list:
+        todo_list.remove(task)
+    else:
+        print(f"{task} is not exist")
+
+def list_task(todo_list):
+    if not todo_list:
+        print("The todo list is empty")
+    else:
+        for i, task in enumerate(todo_list, start=1):
+            print(f"{i}. {task}")
+
+def run_to_manager():
+    todo_list=[]
+
+    while True:
+        print("\nChoose an action:")
+        print("1. Add task")
+        print("2. Remove task")
+        print("3. List tasks")
+        print("4. Quit")
+
+        user_input = input("Enter your command: ")
+
+        if user_input == "1":
+            task = input("Enter task to add: ")
+            add_list(todo_list, task)
+        elif user_input == "2":
+            task = input("Enter task to remove: ")
+            remove_list(todo_list, task)
+        elif user_input == "3":
+            list_task(todo_list)
+        elif user_input == "4":
+            print("thank you")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+run_to_manager()
 
 
 
