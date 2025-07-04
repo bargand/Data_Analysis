@@ -178,12 +178,25 @@ run_to_manager()
 import pyshorteners
 
 def shorten_url(long_url):
-    s = pyshorteners.Shortener().tinyurl.short(long_url)
 
-    print(s)
+    if "https://" in long_url and "." in long_url:
+        if len(long_url) > 28:
+            s = pyshorteners.Shortener().tinyurl.short(long_url)
+            lenght = len(long_url)
+            print(s, lenght)
+        else:
+            print("Your url size is too small")
+    else:
+        print("Please enter a valid link")
 
-shorten_url("https://www.google.com/search?q=url+short+pip&rlz=1C1ONGR_enIN1128IN1128&oq=url+short+pip&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgoIAhAAGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQgzMjgwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8")
+
+
 shorten_url("https://pypi.org/project/pyshorteners/")
+shorten_url("https://tinyurl.com/22l7bx24")
+shorten_url("http:jkh.fkjdf")
+shorten_url("https://www.google.com/search?q=url+short+pip&rlz=1C1ONGR_enIN1128IN1128&oq=url+short+pip&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgoIAhAAGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQgzMjgwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8")
+shorten_url(564)
+
 
 
 
