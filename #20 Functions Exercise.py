@@ -178,10 +178,9 @@ run_to_manager()
 import pyshorteners
 
 def shorten_url(long_url):
-    s = pyshorteners.Shortener()
-    d= s.tinyurl.short(long_url)
+    s = pyshorteners.Shortener().tinyurl.short(long_url)
 
-    print(d)
+    print(s)
 
 shorten_url("https://www.google.com/search?q=url+short+pip&rlz=1C1ONGR_enIN1128IN1128&oq=url+short+pip&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgoIAhAAGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQgzMjgwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8")
 shorten_url("https://pypi.org/project/pyshorteners/")
