@@ -120,6 +120,7 @@ else:
 
 '''
 
+'''
 #7: To-Do List Manager by implementing the three functions
 
 def add_list(todo_list, task):
@@ -169,10 +170,21 @@ def run_to_manager():
 
 run_to_manager()
 
+'''
+
+#URL Shortener (Mock) (Function: shorten_url(long_url) (Return a mock shortened version using hashing or a unique code.)
 
 
+import pyshorteners
 
+def shorten_url(long_url):
+    s = pyshorteners.Shortener()
+    d= s.tinyurl.short(long_url)
 
+    print(d)
+
+shorten_url("https://www.google.com/search?q=url+short+pip&rlz=1C1ONGR_enIN1128IN1128&oq=url+short+pip&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgoIAhAAGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQgzMjgwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8")
+shorten_url("https://pypi.org/project/pyshorteners/")
 
 
 
