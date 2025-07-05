@@ -172,6 +172,7 @@ run_to_manager()
 
 '''
 
+'''
 #URL Shortener (Mock) (Function: shorten_url(long_url) (Return a mock shortened version using hashing or a unique code.)
 
 
@@ -197,27 +198,129 @@ shorten_url("http:jkh.fkjdf")
 shorten_url("https://www.google.com/search?q=url+short+pip&rlz=1C1ONGR_enIN1128IN1128&oq=url+short+pip&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgoIAhAAGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQgzMjgwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8")
 shorten_url(564)
 
+'''
+
+'''
+#Text Summarizer (Function: summarize_text(text, max_sentences) (Return the first n sentences from the input.)
+
+def summarize_text(text, max_sentences):
+    sentences = text.split(" ")
+    sen = sentences[0 : max_sentences]
+    
+    print(f"{" ".join(sen)}")
+
+summarize_text("This is the first sentence. This is the second sentence. And this is the third.", 5)
+summarize_text("This is the first sentence. This is the second sentence. And this is the third.", 3)
+summarize_text("This is the first sentence. This is the second sentence. And this is the third.", 4)
+summarize_text("This is the first sentence. This is the second sentence. And this is the third.", 10)
+
+'''
+
+'''
+#Simple Weather Report Formatter (Function: format_weather_data(city, temperature, humidity) (Return a formatted weather summary string.)
+
+def format_weather_data(city, temperature, humidity):
+    return f"Weather forcast.\nIn {city} temperature is {temperature}°C and Humidity is {humidity}%"
+
+report = format_weather_data("Kamarpukur", 32, 80)
+
+print(report)
+
+'''
+
+'''
+#Data Aggregator (CSV) (Function: summarize_csv(file_path) (Read a CSV file (e.g., sales.csv), return summary (e.g., total sales, average, by category).)
+
+import csv
+
+with open("vignaR.csv", "r") as file:
+    render_file = csv.reader(file)
+
+    for row in render_file:
+        print(row)
 
 
+import pandas as pd
 
+df = pd.read_csv("SaleData.csv")
 
+print(df.info())
+        
+'''
 
+#User Authentication System Functions:(register_user(users, username, password) (authenticate_user(users, username, password) (Store users in a dictionary, password hashed (e.g., using hashlib).)
 
+import hashlib
 
+def register_user(users, username, password):
+    """
+    Register a new user with a username and hashed password.
+    
+    Args:
+        users (dict): Dictionary of existing users
+        username (str): New user's username
+        password (str): New user's password
+        
+    Returns:
+        dict: Updated users dictionary
+    """
+    if username in users:
+        print("Username already exists. Please choose a different one.")
+        return users
+    
+    # Hash the password using SHA-256
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    
+    # Store the user information
+    users[username] = {
+        'password_hash': hashed_password
+    }
+    
+    print(f"User '{username}' registered successfully.")
+    return users
 
+def authenticate_user(users, username, password):
+    """
+    Authenticate a user by verifying username and password.
+    
+    Args:
+        users (dict): Dictionary of existing users
+        username (str): User's username
+        password (str): User's password
+        
+    Returns:
+        bool: True if authentication succeeds, False otherwise
+    """
+    if username not in users:
+        print("Authentication failed: Username not found.")
+        return False
+    
+    # Hash the provided password to compare with stored hash
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    
+    if users[username]['password_hash'] == hashed_password:
+        print(f"Authentication successful for user '{username}'.")
+        return True
+    else:
+        print("Authentication failed: Incorrect password.")
+        return False
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Example usage
+if __name__ == "__main__":
+    # Initialize an empty user dictionary
+    users = {}
+    
+    # Register some users
+    users = register_user(users, "alice", "securepassword123")
+    users = register_user(users, "bob", "bobspassword")
+    
+    # Try to register an existing user
+    users = register_user(users, "alice", "newpassword")
+    
+    # Test authentication
+    authenticate_user(users, "alice", "securepassword123")  # Should succeed
+    authenticate_user(users, "alice", "wrongpassword")      # Should fail
+    authenticate_user(users, "charlie", "anypassword")      # Should fail (user doesn't exist)
 
 
 
