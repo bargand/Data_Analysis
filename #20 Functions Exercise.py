@@ -321,6 +321,7 @@ if __name__ == "__main__":
     authenticate_user(users, "alice", "securepassword123")  # Should succeed
     authenticate_user(users, "alice", "wrongpassword")      # Should fail
     authenticate_user(users, "charlie", "anypassword")      # Should fail (user doesn't exist)
+    
 
 
 
