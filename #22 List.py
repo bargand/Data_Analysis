@@ -48,6 +48,11 @@ number.extend(number2)
 print(number)
 
 '''
+#replace
+ani = ["lion", "monkey", "tiger", "fox"]
+ani[2] = "Debargha"
+print(ani)
+
 
 
 
@@ -94,7 +99,6 @@ while i < len(thislist):
 
 [print(i) for i in thislist]
 
-'''
 
 num1 = [1,2,3,4,5,6,7,8,9,10]
 num2 = []
@@ -104,16 +108,72 @@ for i in num1:
     print(num2)
 print(f"the numbers is{num2}")
 
+'''
+
+'''
+#short list
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
 
 
+name = ["Aman Kumar", "Anargha Gopan", "Ankit Kumar", "Christina Mushahary", "Ganesula Jaya Veerendra", "Kriti Gupta", "Kummara Vardhan", "Manisha Kumari", "Mehjabeen Rahman", "Prashanti Maiti", "Praveen Kumar Roy", "Rashtrapal Maroti Sonkamble", "Romit Roy", "Roshan Kumar Rai", "Saumyanetra Dattamajumder", "Shankhashubhra Sahoo", "Sivangee Dhar", "Sovan Lal Ghara", "Sumit Kumar", "Taushif Ahammed Molla", "Deepak Jangid", "Farhat", "Jyotinmoy Ghosh", "Kengam Mani Kumar", "Khushboo Solanki", "Kumari Shalini", "Lakshmigayatri Kolluri", "Manish Kumar Toppo", "Mayukh Nath", "Mohit Kumar Dubey", "Mona Kumari", "Mrinal Kumar", "Abinash Kabi", "Afifa Siddika", "Akansha Singh", "Anirban Samanta", "Anish R", "Arghanil Ghosh", "Arjya Kumar", "Ashok Saini", "Avik Pramanik", "Baishali Biswas", "Barsha Mishra", "Bhawani Kumari", "Nimish Mishra", "Pate Yakum", "Pratanu Sarkar", "Pritam Maity", "Pushpendra Singh", "Rachamallu Akhileswar Reddy", "Rahul Yadav", "Ritam Dutta", "Rohit Choudhary", "Rupam Das", "Rushita Anand", "Saloni Singh", "Saumadeep Chakraborty", "Sayan Mukherjee", "Shraddha Mohapatra", "Shubham Singh", "Simran Keshri", "Srinjoyee Ghorui", "Subhadeep Banerjee", "Subhadeep Karmakar", "Suman Samanta", "Swati", "Swati Priya", "Swetapadma Jena"]
+
+for i in range(len(name)):
+    name.sort()
+    print(name[i])
+    i += 1
 
 
+num = [12, 13, 13, 10, 13, 15, 7, 11, 14, 11, 11, 13, 15, 13, 14, 19, 13, 6, 23, 15, 17, 16, 11, 14, 15, 22, 18, 14, 11, 16, 17, 11, 12, 13, 10, 15, 14, 17, 12, 16, 27, 11, 27, 11, 15, 9, 16, 9, 13, 12, 21, 25, 15, 20, 18, 13, 13, 13, 15, 16, 18, 18, 13, 11, 5, 11, 15, 21]
+
+num.sort()
+print(num)
+
+num.sort(reverse=True)
+print(num)
+
+'''
+
+'''
+#copy list
+
+num = [12, 13, 13, 10, 13, 15, 7, 11, 14, 11, 11, 13, 15, 13, 14, 19, 13, 6, 23, 15, 17, 16, 11, 14, 15, 22, 18, 14, 11, 16, 17, 11, 12, 13, 10, 15, 14, 17, 12, 16, 27, 11, 27, 11, 15, 9, 16, 9, 13, 12, 21, 25, 15, 20, 18, 13, 13, 13, 15, 16, 18, 18, 13, 11, 5, 11, 15, 21]
+
+number = num.copy()
+
+print(number)
+
+num2 = list(number)
+print(num2)
+
+'''
+
+'''
+# add list
+
+num1 = [12, 13, 13, 10, 13, 15, 7, 11, 14, 11, 11, 13, 15, 13, 14, 19, 13, 6, 23, 15, 17, 16, 11, 14, 15, 22, 18, 14, 11, 16, 17, 11, 12, 13, 10, 15, 14, 17, 12] 
+
+num2 = [16, 27, 11, 27, 11, 15, 9, 16, 9, 13, 12, 21, 25, 15, 20, 18, 13, 13, 13, 15, 16, 18, 18, 13, 11, 5, 11, 15, 21]
+
+num3 = [13, 13, 15, 16, 18, 18, 13, 11, 5, 11, 15, 21]
+
+name = ["Aman Kumar", "Anargha Gopan", "Ankit Kumar", "Christina Mushahary", "Ganesula Jaya Veerendra", "Kriti Gupta", "Kummara Vardhan", "Manisha Kumari", "Mehjabeen Rahman", "Prashanti Maiti", "Praveen Kumar Roy", "Rashtrapal Maroti Sonkamble", "Romit Roy"]
+
+num3 = num1+num2+num3+name
+print(num3)
+count_number = num3.count(11)
+count_name = num3.count("Anargha Gopan")
+print(count_name)
 
 
+for i in num2:
+    num1.append(i)
+# print(num1)
 
+num1.extend(num2)
+# print(num1)
 
-
-
-
-
+'''
 
