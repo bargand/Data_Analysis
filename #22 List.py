@@ -74,7 +74,6 @@ ani.pop(1) # this will remove the specific item
 ani.pop() # this will remove the last item is the list
 print(ani)
 
-'''
 
 #loops in list
 
@@ -95,6 +94,15 @@ while i < len(thislist):
 
 [print(i) for i in thislist]
 
+'''
+
+num1 = [1,2,3,4,5,6,7,8,9,10]
+num2 = []
+
+for i in num1:
+    num2.append(i)
+    print(num2)
+print(f"the numbers is{num2}")
 
 
 
