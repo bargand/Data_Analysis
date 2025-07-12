@@ -353,6 +353,7 @@ print(cities)
 '''
 
 '''
+'''
 users = [
     {"name": "Alice", "address": {"city": "Tokyo", "country": {"pin": 712611, "vill": "shaljhar"}}},
     {"name": "Bob", "address": {"city": "Berlin", "country": {"pin": 722141, "vill": "khatul"}}},
@@ -367,7 +368,6 @@ pins = [
 ]
 print(pins)
 
-'''
 
 '''
 #Chaining Filters (Given a list of dictionaries (products), filter products with price > 100 and stock > 0.)
