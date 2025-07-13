@@ -140,7 +140,7 @@ print(myfamily["member1"]["name"])
 print(myfamily["member2"]["year"])
 
 #update
-myfamily["member3"].update({"name": "hh"})
+myfamily["member3"].update({"name": "hh"}) 
 print(myfamily)
 
 
