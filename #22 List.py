@@ -1,23 +1,23 @@
-'''
 num = [1,2,3,4,5,6,7,8]
 
-print(num)
-print(num[0])
-print(num[1])
-print(num[2])
-print(num[3])
-print(num[4])
-print(num[5])
-print(num[6])
+# print(num)
+# print(num[0])
+# print(num[1])
+# print(num[2])
+# print(num[3])
+# print(num[4])
+# print(num[5])
+# print(num[6])
 
-print(num[0:3])
+# print(num[0:3])
+print(num[-1:4])
+'''
 print(num[0:3+1])
 
 print(num[:6]) #if 6 then 6-1 is consider
 
 print(num[2:]) # first argument is always in the proper place but in the secound argument it is in n-1
 
-print(num[-1:-4])
 
 
 print(len(num))
@@ -47,20 +47,20 @@ number2 = [90,45,87,95,35,15,48,68,35,17,84] # when we have more argument then w
 number.extend(number2)
 print(number)
 
-'''
 #replace
 ani = ["lion", "monkey", "tiger", "fox"]
 ani[2] = "Debargha"
 print(ani)
 
+'''
 
 
 
+'''
 #remove method in list
 
 ani = ["lion", "monkey", "tiger", "fox"]
 
-'''
 #1st method for remove
 ani.remove("tiger")
 

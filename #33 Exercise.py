@@ -30,6 +30,7 @@ print(sin_str)
 
 '''
 
+'''
 import random
 
 def my_fun(n=3, new_str=2):
@@ -49,16 +50,52 @@ c = new_str1+b+a+new_str2
 
 sin_str = "".join(c)
 
-print(sin_str)
+print(f"Your coded name is: {sin_str}")
+'''
+
+'''
+
+name2 = sin_str
+
+# x = list(name2[0:3])
+# y = list(name2[-3:])
+
+# print(x)
+# print(y)
+
+z = list(name2[-4])
+# print(z)
+
+i = list(name2[3:-4])
+# print(i)
+
+print(f"the decode name is: {"".join(z+i)}")
+
+'''
 
 
 
+import random
 
+def my_fun(n=3, new_str=2):
+    alpha = list("abcdefghijklmnopqrstuvwxyz")
 
+    return [[random.choice(alpha) for _ in range(n)] for _ in range(new_str)]
+new_str1,new_str2 = my_fun()
 
+name = input("Enter the name: ")
 
+a = list(name[0])
+b = list(name[1:])
+c = new_str1+b+a+new_str2
 
+sin_str = "".join(c)
 
+print(f"Your coded name is: {sin_str}")
 
+name2 = sin_str
 
+z = list(name2[-4])
+i = list(name2[3:-4])
 
+print(f"the decode name is: {"".join(z+i)}")
