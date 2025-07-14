@@ -43,3 +43,4 @@ Riya submitted the project, but she also wrote a blog post titled **“The Day M
 From then on, she always named her variables carefully, avoided shadowing, and never silenced errors unless absolutely necessary.
 
 And somewhere, a spoon collector received the world’s most accurate invoice, all thanks to a curious young programmer and her vanishing variable.
+                                                                                           V
