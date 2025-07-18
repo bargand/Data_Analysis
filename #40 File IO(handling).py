@@ -79,8 +79,53 @@ while True:
 
 '''
 
+'''
 f = open("myfile.txt" ,"w")
 
 line_write = [{32,78,90},{56,98,64},{98,25,84}]
 for i in line_write:
     f.writelines(f"{i}\n")
+'''
+
+'''
+with open("myfile2.txt" , "r") as f:
+    f.seek(10) # this seek function will allows to move x bit to its current position and then it read and the first x bit will not read
+    print(f.tell()) # the current position
+    data = f.read(5) # this read(5) argument will read the current position to 5 bit.
+    print(data)
+
+'''
+
+#it will cut rest of the bit
+with open("myfile2.txt" , "w") as f:
+    f.write("Debargha nandi")
+    data = f.truncate(8)
+    print(data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
