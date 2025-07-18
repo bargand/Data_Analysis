@@ -65,6 +65,7 @@ print(a)
 
 '''
 
+'''
 x = {"f", "e", "d", "c", "b", "a"}
 y = {"a", "b", "c"}
 z = {"a", "b", "c"}
@@ -75,6 +76,10 @@ h = y.issubset(z)
 
 print(g)
 print(h)
+
+'''
+colors = {"red", "blue", "green"}
+print(colors)  # Might print: {'green', 'red', 'blue'} — order not guaranteed
 
 
 
