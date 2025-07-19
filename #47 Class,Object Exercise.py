@@ -118,7 +118,14 @@ The_circle.area()
 '''
 
 
+'''
+6. Inheritance: Animal and Dog
+Question: Create a base class Animal with a method speak(). Derive a class Dog that overrides speak().
 
+Description: Learn how inheritance and method overriding works.
+'''
+
+    
 
 
 
