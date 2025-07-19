@@ -76,15 +76,46 @@ Question: Create a Student class with name, and a list of grades. Add a method a
 
 Description: Practice managing internal data (lists) and computing derived values.
 '''
+'''
+import statistics
+class Student():
+    def __init__(self,name,grade):
+        self.name = name
+        self.grade = grade
+    def average_grade(self):
+        print(f"The Average grade of {self.name} is {sum(self.grade) / len(self.grade)}")
+        print(f"The Average grade of {self.name} is {statistics.mean(self.grade)}")
 
+boy = Student("Debargha nandi" , [10, 20, 30, 40, 50])
 
+boy.average_grade()
 
+'''
 
+'''
+5. Circle with Default Radius
+Question: Create a Circle class with a default radius of 1. Add a method to compute area.
 
+Description: Practice default arguments and use of the math module inside methods.
+'''
+'''
+import math
+class Circle():
+    def Cir_radious(self, radious=1):
+        self.radious = radious
+    def area(self):
+        print(f"The circle area is: {((math.pi) * (math.pow(self.radious , 2))):.2f} m²")
+        # print(f"The circle area is: {round((math.pi) * (math.pow(self.radious , 2)), 2)} m²")
 
+The_circle = Circle()
+The_circle.Cir_radious(7)
+# The_circle.Cir_radious(0)
+# The_circle.Cir_radious(3.141)
+# The_circle.Cir_radious(0.005)
+# The_circle.Cir_radious(790)
+The_circle.area()
 
-
-
+'''
 
 
 
