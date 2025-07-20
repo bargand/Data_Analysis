@@ -21,12 +21,12 @@ f.close()
 '''
 
 '''
+'''
 #fileno
 
 f = open("myfile.txt" , "r")
 print(f.fileno())
 
-'''
 
 '''
 #readable()
@@ -96,11 +96,13 @@ with open("myfile2.txt" , "r") as f:
 
 '''
 
+'''
 #it will cut rest of the bit
 with open("myfile2.txt" , "w") as f:
     f.write("Debargha nandi")
     data = f.truncate(8)
     print(data)
+'''
 
 
 
