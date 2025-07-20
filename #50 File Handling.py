@@ -93,12 +93,35 @@ with open("myfile.txt", "rt") as f:
 
 '''
 
-name = "Debargha nandi is a good boy"
-print(len(name))
 
 
 
 
+#delete file method
+'''
+1. file delete - remove()
+2. folder delete - rmdir()
+'''
+
+'''
+#file delete with remove function
+import os
+
+if os.path.exists("E:/Python New/good/good.txt"):
+    os.remove("E:/Python New/good/good.txt")
+else:
+    print("file not exist")
+
+'''
+
+'''
+#folder delete
+
+import os
+
+os.rmdir("E:/Python New/good")
+
+'''
 
 
 
