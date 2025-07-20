@@ -84,7 +84,7 @@ with open("deba.txt" , "rt") as f:
 #write mode
 
 with open("myfile.txt" , "wt") as f:
-    print(f.write("Debargha nandi is a good boy")) # exicuting this line there was print one number that is the length of the
+    print(f.write("Debargha nandi is a good boy")) # exicuting this line there was print one number that is the length of the text
 
 with open("myfile.txt", "rt") as f:
     print(f.read())
