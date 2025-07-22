@@ -99,15 +99,142 @@ pat = mri[96:160, 96:160]
 
 print(pat)
 '''
+#or
+'''
+arr = np.array([
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12],
+    [13,14,15,16]
+])
 
+print(arr[1:3,1:3]) # prothom er 1:3 hocche main array gulo theke extracct korbe r 2nd 1:3 hocche individual extract korbe je array gulo first 1:3 er moddhe porbe.
+
+'''
 '''
 4. Customer Data: Filter Customers in Age Range
 You have a 2D array where column 0 = Age, column 1 = Income. Get all rows where age is between 25 and 40.
 '''
-
+'''
 user_data = np.round(np.random.randint([18, 30000], [70, 120000], size=(1000, 2)))
 print(user_data)
 
 extract_row = user_data[(user_data[:,0] >= 25) & (user_data[:, 0] <= 40)]
 
 print(extract_row)
+'''
+
+'''
+data = np.random.rand(7, 96)  # shape: (days, 15-min intervals)
+
+# 6 PM = 18*4 = 72, 10 PM = 22*4 = 88
+evening_peak = data[:, 72:88]
+print(evening_peak)
+'''
+
+'''
+Problem 1: Filtering Outliers in Sales Data
+You have a NumPy array sales_data containing daily sales (some values are outliers).
+Task:
+
+Replace all sales values above 3 standard deviations from the mean with the median value.
+
+Use boolean indexing to filter and replace.
+'''
+'''
+arr = np.array([1200, 1500, 900, 3000, 1800, 50000, 2000, 1600])
+
+mean_val = np.mean(arr)
+median_val = np.median(arr)
+std_val = np.std(arr)
+
+arr[arr > mean_val + 3*std_val] = median_val
+print(arr)
+'''
+
+'''
+Problem 2: Extracting Quarterly Revenue
+You have a 2D array revenue where each row represents a month, and columns represent regions.
+Task:
+
+Slice the array to get Q1 (Jan-Mar) revenue for Region 2 (2nd column).
+'''
+'''
+rev = np.array(
+    [
+    [120, 150, 200],  # Jan
+    [130, 160, 210],  # Feb
+    [140, 170, 220],  # Mar
+    [150, 180, 230],  # Apr
+]
+)
+
+print(rev[:3, 1])
+#or
+print(rev[:3, 1:2])
+'''
+'''
+Problem 3: Masking Negative Values in Temperature Data
+You have a temperature dataset with some erroneous negative values.
+Task:
+
+Use boolean indexing to replace all negative values with np.nan.
+'''
+'''
+temp = np.array([25.5, -999, 22.1, 23.4, -999, 24.0])
+
+temp[temp < 0] = np.nan
+print(temp)
+'''
+
+'''
+Problem 4: Extracting Weekday Data from Time Series
+You have an array daily_sales where weekends (Sat & Sun) have -1 as a placeholder.
+Task:
+
+Extract only weekday sales (exclude -1).
+'''
+'''
+sl_rev = np.array([100, 120, -1, -1, 110, 105, 90])
+
+weekday_data = sl_rev[sl_rev != -1]
+print(weekday_data)
+'''
+
+'''
+Problem 5: Slicing Time-Based Data
+You have a 2D array sensor_data where the 1st column is timestamp and the 2nd is value.
+Task:
+
+Extract all rows where timestamp is between 100 and 200.
+'''
+'''
+sensor_data = np.array([
+    [50, 12.5],
+    [100, 15.0],
+    [150, 17.5],
+    [200, 20.0],
+    [250, 22.5]
+])
+
+extract_data = sensor_data[(sensor_data[:,0] >= 100) & (sensor_data[:,0] <= 200)]
+
+print(extract_data)
+
+'''
+'''
+Problem 6: Flipping a Correlation Matrix
+You have a correlation matrix corr_matrix, but the rows/columns are misaligned.
+Task:
+
+Reverse the order of rows only (last row becomes first).
+'''
+corr_matrix = np.array([
+    [1.0, 0.5, 0.3],
+    [0.5, 1.0, 0.7],
+    [0.3, 0.7, 1.0]
+])
+
+# Your solution here (reverse rows)
+flipped_corr = corr_matrix[::-1, :]
+print(flipped_corr)
